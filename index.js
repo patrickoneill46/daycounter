@@ -15,13 +15,31 @@ function parseInputs(startDate, endDate, paymentDate, UK){
 	d3 = moment(paymentDate);
 }
 
-function thirtyThreeSixty(startDate, endDate, paymentDate, method){
+function thirtyThreeSixty(startDate, endDate, paymentDate, freq, method){
 
 	parseInputs(startDate, endDate, paymentDate);
+	var freq = 1,
+		method = method || 'us';
 
 	var methods = {
+		us: function (){
 
-	}
+			// return {
+			// 	factor: (360 * (d2.year() - d1.year()) + 30 * (d2.month() - d1.month()) + (d2.date() - d1.date()))/360,
+			// 	couponFactor: (360 * (d3.year() - d1.year()) + 30 * (d3.month() - d1.month()) + (d3.date() - d1.date()))/360;
+			// }
+
+		},
+		bond: function (){
+
+		},
+		europe: function(){
+
+		},
+		"europe-isda": function(){
+
+		}
+	};
 
 	var factor = (360 * (d2.year() - d1.year()) + 30 * (d2.month() - d1.month()) + (d2.date() - d1.date()))/360,
 		couponFactor = (360 * (d3.year() - d1.year()) + 30 * (d3.month() - d1.month()) + (d3.date() - d1.date()))/360;
@@ -33,7 +51,7 @@ function thirtyThreeSixty(startDate, endDate, paymentDate, method){
 
 }
 
-function actual(startDate, endDate, paymentDate, method){
+function actual(startDate, endDate, paymentDate, freq, method){
 
 	parseInputs(startDate, endDate, paymentDate);
 

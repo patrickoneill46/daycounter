@@ -1,0 +1,25 @@
+{
+  "name": "daycounter",
+  "version": "0.0.0",
+  "description": "Caclulate frequency and coupon factors for interest accrual",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/patrickoneill46/daycounter"
+  },
+  "author": "Patrick O'Neill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickoneill46/daycounter/issues"
+  },
+  "homepage": "https://github.com/patrickoneill46/daycounter",
+  "dependencies": {
+    "moment": "^2.9.0"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0"
+  }
+}
